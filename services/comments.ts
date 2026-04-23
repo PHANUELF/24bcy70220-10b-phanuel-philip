@@ -1,4 +1,4 @@
-import Comment from "@/models/Comment";
+import Comment from "../models/Comment";
 
 export async function getCommentsByPost(postId: string) {
   return await Comment.find({ postId }).sort({ createdAt: -1 });
